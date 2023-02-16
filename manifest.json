@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Crunchyroll Background Color Changer",
+    "description": "Changes the background color of www.crunchyroll.com to red",
+    "version": "1.0",
+    "permissions": ["activeTab", "webRequest"],
+    "background": {
+      "service_workers": ["background.js"]
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.hidive.com/*"],
+        "js": ["content.js"],
+        "css": ["style.css"]
+      }
+    ]
+  }
